@@ -1,0 +1,46 @@
+._preload {
+	background-color: #111417;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-z-index: 100;
+	-moz-z-index: 100;
+	z-index: 100;
+	display: flex;
+	-moz-perspective: 100;
+	-webkit-perspective: 100;
+	perspective: 100;
+	-moz-transition: opacity 0.3s ease 0s;
+	-webkit-transition: opacity 0.8s ease 0s;
+	transition: opacity 0.8s ease 0s;
+}
+._preload._hide {
+	opacity: 0;
+}
+._preload span {
+	display: block;
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(253, 197, 1);
+	animation: 2s linear 0s infinite loading;
+}
+@keyframes loading {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	25% {
+		transform: rotateX(180deg) rotateY(0deg);
+	}
+	50% {
+		transform: rotateX(180deg) rotateY(180deg);
+	}
+	75% {
+		transform: rotateX(360deg) rotateY(180deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
